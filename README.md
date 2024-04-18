@@ -29,18 +29,12 @@ Example:
 #SBATCH --job-name=nps_job_array          # [optional] Job name
 #SBATCH --mail-type=ALL                   # [optional] Email notifications received for ALL job events [other options: E for errors]
 
+# resets language
 export LC_ALL=C; unset LANGUAGE
-
-# get list of input files, input directory is the first passed-in parameter
-input_dir=$1
-input_files=($input_dir/*mzML)
-input_file=${input_files[$SLURM_ARRAY_TASK_ID]}
 
 # Load necessary modules
 module load gcc
-module load apptainer
+# module load ZZ
 
-# Change to working directory
-apptainer exec --nv /arc/project/st-username-1/apptainer/ubuntu.sandbox Rscript /arc/project/st-username-1/git/mass_spec/go.R $input_file
 ```
 
