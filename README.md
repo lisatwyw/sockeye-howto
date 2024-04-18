@@ -20,11 +20,11 @@ moak1 (Maya Oak) 
 #SBATCH --ntasks-per-node=1               # Number of tasks per node for each sub-job.
 #SBATCH --time=X:00:00                    # Estimating X hours of runtime, e.g. X=3
 #SBATCH --mem=YG                          # Request Y GB of memory, e.g. Y=8
-#SBATCH --output=logs/array_%A_%a.out     # Redirects output to a unique file for each sub-job.
-#SBATCH --error=logs/array_%A_%a.err      # Redirects error logs to a unique file for each sub-job.
+#SBATCH --output=logs/array_%A_%a.out     # [optional] Redirects output to a unique file for each sub-job.
+#SBATCH --error=logs/array_%A_%a.err      # [optional] Redirects error logs to a unique file for each sub-job.
 #SBATCH --mail-user=your_email_addr@ca    # [optional] Email address for job notifications
 #SBATCH --job-name=nps_job_array          # [optional] Job name
-#SBATCH --mail-type=ALL                   # Receive email notifications for all job events
+#SBATCH --mail-type=ALL                   # [optional] Email notifications received for ALL job events [other options: E for errors]
 
 export LC_ALL=C; unset LANGUAGE
 
