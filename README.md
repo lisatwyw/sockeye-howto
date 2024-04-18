@@ -13,13 +13,16 @@ moak1 (Maya Oak) 
 
 ## Slurm job
 
+
+Example:
+
 ```
 #!/bin/bash
 #SBATCH --account=username                # Allocation code
 #SBATCH --nodes=1                         # Number of nodes for each sub-job.
 #SBATCH --ntasks-per-node=1               # Number of tasks per node for each sub-job.
-#SBATCH --time=X:00:00                    # Estimating X hours of runtime, e.g. X=3
-#SBATCH --mem=YG                          # Request Y GB of memory, e.g. Y=8
+#SBATCH --time=X:00:00                    # Estimating X hours of runtime, e.g. X=3   (job will not be complete if actual runtime needed exceeds X)
+#SBATCH --mem=YG                          # Estimating Y GB of memory needed, e.g. Y=8  (will not run successfully if actual memory needed exceeds Y)
 #SBATCH --output=logs/array_%A_%a.out     # [optional] Redirects output to a unique file for each sub-job.
 #SBATCH --error=logs/array_%A_%a.err      # [optional] Redirects error logs to a unique file for each sub-job.
 #SBATCH --mail-user=your_email_addr@ca    # [optional] Email address for job notifications
