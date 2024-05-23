@@ -1,0 +1,22 @@
+plugins:
+  - jekyll-relative-links
+relative_links:
+  enabled: true
+  collections: true
+include:
+  - README.md
+  - LICENSE.md
+title: Python/Git Workshop
+markdown: GFM
+show_downloads: true
+theme:  jekyll-theme-cayman 
+
+
+# jekyll-theme-minimal     <-- blue
+# jekyll-theme-hacker      <-- black background with typewriter font
+# jekyll-theme-architect   <-- handwriting-like font
+# jekyll-theme-merlot      <-- scrolls as decorations
+# jekyll-theme-cayman      <-- green/blue top banner 
+# jekyll-theme-midnight    <-- dark
+# jekyll-theme-leap-day    <-- blue/yellow theme conciding with Python logo colors
+# others:                  <-- https://github.com/pages-themes
