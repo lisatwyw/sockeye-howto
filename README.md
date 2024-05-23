@@ -79,6 +79,6 @@ Example:
 export LC_ALL=C; unset LANGUAGE
 
 # Load necessary modules
-module load gcc
+module load gcc/5.5.0
 ```
 
