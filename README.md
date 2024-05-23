@@ -38,3 +38,16 @@ module load gcc
 
 ```
 
+## Conda environments
+
+### New Python environment with ```ipython```
+
+```
+conda create -n "py3.12" python=3.12 ipython  
+conda activate py3.12
+```
+
+####
+```
+conda env create -f environment.yml 
+```
