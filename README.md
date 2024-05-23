@@ -1,4 +1,4 @@
-# how-to-sockeye
+# Sockeye: usage notes for working in the ARC (Advanced Research Computing) environment 
 
 ## Contents
 
