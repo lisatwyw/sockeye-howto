@@ -1,14 +1,45 @@
 # how-to-sockeye
 
-## Quick functions
+## Contents
 
-```print_members```
+1. Frequent Linux commands
+2. Modules
+3. Virtual environments via Conda
+4. Example Slurm job
 
+## Linux commands
 
+### ```print_members```
+
+Output:
 ```
 #################################### Allocation members for st-username-1 ####################################
 sli (Sears Li) 
 moak1 (Maya Oak)  
+```
+
+## Modules
+
+To see how to load a software via loading of required module(s), one may need to query on what to load.
+
+For instance, to use ```Git```, one would issue:
+```
+$module spider git
+```
+
+Which gives an output like this:
+```
+  For detailed information about a specific "git" package (including how to load the modules) use the module's full name. Note that names that have a trailing (E) are extensions provided by other modules.
+  For example:
+
+     $ module spider git/2.41.0
+```
+
+Following the suggested query, one would be advised to load a version of ```gcc``` module
+
+Hence, to use Git, one would issue a command like this:
+```
+ module load gcc/5.5.0 git/2.41.0
 ```
 
 ## Conda environments
@@ -20,7 +51,7 @@ conda create -n "py3.12" python=3.12 ipython
 conda activate py3.12
 ```
 
-####
+#### Replicate exact environment described in a ```environment.yml```
 ```
 conda env create -f environment.yml 
 ```
@@ -49,7 +80,5 @@ export LC_ALL=C; unset LANGUAGE
 
 # Load necessary modules
 module load gcc
-# module load ZZ
-
 ```
 
