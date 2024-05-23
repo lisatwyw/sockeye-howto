@@ -51,16 +51,19 @@ conda create -n "py3.12" python=3.12 ipython
 conda activate py3.12
 ```
 
-#### Replicate exact environment described in a ```environment.yml```
+### Replicate exact environment described in a ```environment.yml```
 ```
 conda env create -f environment.yml 
 ```
 
 
-## Slurm job
+## Running an offline job in Slurm
 
-
-Example:
+1. Create job specification file
+2. Submit on the job-queue
+3. Wait for job release and job completion, which should give you log file(s) as specified via the ```error``` and ```output``` switches.
+ 
+Here's an example job specification:
 
 ```
 #!/bin/bash
