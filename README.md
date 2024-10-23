@@ -56,6 +56,11 @@ conda activate py3.12
 conda env create -f environment.yml 
 ```
 
+## Running an interactive job
+
+```
+salloc --time=10:0:0 --mem=3G --nodes=1 --ntasks=2 --account=st-username-1-gpu --gpus=1
+```
 
 ## Running an offline job in Slurm
 
