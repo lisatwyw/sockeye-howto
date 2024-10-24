@@ -2,12 +2,22 @@
 
 ## Contents
 
-1. Frequent Linux commands
-2. Modules
-3. Virtual environments via Conda
-4. Example Slurm job
+1. One-time setup
+2. Frequent Linux commands
+3. Modules
+4. Conda
+5. Virtual environments via Conda
+6. Running an interactive job (with GPU)
+7. Running an offline job in Slurm
 
-## Linux commands
+## One-time setup  
+1. Apply for Sockeye allocation: https://flex.redcap.ubc.ca/surveys/?s=7MKJT898LK
+2. Setup [Multi-factor authentication](https://mfadevices.id.ubc.ca/). This is mandatory step or you will not be able to SSH.
+3. Install myVPN:
+   - [Set up guide for Mac users](https://ubc.service-now.com/kb_view.do?sysparm_article=KB0017956#macos)
+   - Window users may need to email and request OneDrive link to download an installer, as Lisa did in April, 2024
+
+## Frequent Linux commands
 
 ### ```print_members```
 
@@ -90,3 +100,18 @@ export LC_ALL=C; unset LANGUAGE
 module load gcc/5.5.0
 ```
 
+
+<details>
+
+<summary>Misc.</summary>
+
+```
+  Graham has several types of GPUs, some of which are available with less wait:
+  320 p100 2/node, 12GB, original
+   70 v100 8/node, 16GB, newer, about 50% faster than P100 and with tensor cores
+  144 t4   4/node, 16GB, newer, about half a V100, for compute & AI except much slower FP64
+ ```
+ 
+
+  
+</details>
