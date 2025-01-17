@@ -103,6 +103,30 @@ module load gcc/5.5.0
 
 <details>
 
+   <summary>How much time left before job ends</summary>
+
+```
+echo "$(squeue -h -j $SLURM_JOBID -o %L)"
+```
+
+For instance, ```squeue -u $USER``` shows you the status:
+```
+JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+3951233       gpu interact   xxx    R    9:19:53      1 se353
+```
+
+Then, you could query about end time like this:
+```
+echo "$(squeue -h -j 3951233 -o %L)"
+```
+           
+</details>
+
+
+<details>
+
+
+
 <summary>Misc.</summary>
 
 ```
